@@ -6,6 +6,9 @@ metadata:
 spec:
   host: brewz.f5demo.com
   upstreams:
+  - name: spa-dark
+      service: spa-dark
+      port: 80
     - name: spa
       service: spa
       port: 80
@@ -18,9 +21,7 @@ spec:
     - name: recommendations
       service: recommendations
       port: 8001
-    - name: spa-dark
-      service: spa-dark
-      port: 80
+    
   routes:
     - path: /
       matches:
